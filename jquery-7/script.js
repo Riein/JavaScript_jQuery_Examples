@@ -7,4 +7,5 @@ $( function() {
     $( "#accordion" ).accordion();
 
     $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
 });
