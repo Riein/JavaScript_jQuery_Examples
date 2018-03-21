@@ -39,13 +39,24 @@ $(function() {
 
 
     //Set the iframe contents to contain the html panel values
-    $("iframe").contents().find("html").html($("#html-panel").val());
+    updateOutput();
 
     //On change to html-panel, set the iframe text
     $("#html-panel").on("change keyup paste", function() {
 
-        $("iframe").contents().find("html").html($("#html-panel").val());
+        updateOutput();
 
     });
 
 });
+
+//Updates the iframe output window with latest html and css properties
+function updateOutput() {
+    $("iframe").contents().find("html").html(
+        "<html><head><style type='text/css'>" 
+        + $("#css-panel").val() 
+        + "</style></head><body>"
+        + $("#html-panel").val()
+        + "</body></html>"
+    );
+}
