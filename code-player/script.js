@@ -42,7 +42,7 @@ $(function() {
     updateOutput();
 
     //On change to html-panel, set the iframe text
-    $("#html-panel").on("change keyup paste", function() {
+    $("textarea").on("change keyup paste", function() {
 
         updateOutput();
 
@@ -59,4 +59,8 @@ function updateOutput() {
         + $("#html-panel").val()
         + "</body></html>"
     );
+
+    document.getElementById("output-panel").contentWindow.eval($("#javascript-panel").val());
+
+    
 }
