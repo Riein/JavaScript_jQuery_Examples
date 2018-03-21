@@ -69,3 +69,7 @@ textarea {
 iframe {
     border:none;
 }
+
+.hidden {
+    display: none;
+}
