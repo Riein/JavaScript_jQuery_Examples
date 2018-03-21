@@ -9,7 +9,6 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- jQuery js inclusion -->
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> <!-- jQuery UI inclusion -->
 
-        <script type="text/javascript" src="script.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
@@ -34,26 +33,14 @@
             
         </div>
 
-        <script type="text/javascript">
+        <div id="body-container">
 
-            //On toggle button hover, add/remove highlighted styling
-            $(".toggle-button").hover(function() {
+            <textarea id="html-panel" class="panel">Hello World</textarea>
 
-                $(this).addClass("highlighted-button");
+            <iframe id="output-panel" class="panel"></iframe>
 
-            }, function() {
+        </div>
 
-                $(this).removeClass("highlighted-button");
-
-            });
-
-            //On toggle button click, toggle active class and remove highlighted class
-            $(".toggle-button").click(function() {
-                $(this).toggleClass("active");
-
-                $(this).removeClass("highlighted-button");
-            });
-
-        </script>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
